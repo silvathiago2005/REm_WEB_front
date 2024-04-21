@@ -1,0 +1,17 @@
+.navbar{
+    display: inline;
+}
+
+.iconPosition{
+    float: inline-start;
+}
+
+.positionDescription{
+    width: 79%;
+    float: inline-end;
+    display: flex;
+}
+
+.positionSpan{
+    transform: translate(0, 60%);
+}

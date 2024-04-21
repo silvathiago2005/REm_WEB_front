@@ -1,0 +1,37 @@
+<div class="resetSenhaBackground">
+    <div class="mainDivLogin">
+        <div class="divImage"><img src="" alt="" width="300px" height="300px" border-radius="10px"></div>
+        <div class="divLogin" [formGroup]="resetSenhaProfile">
+          <mat-form-field class="example-full-width">
+              <mat-label>Usuário</mat-label>
+              <input class="positionUsername" type="text" matInput placeholder="Patinho feio" formControlName="username">
+                <mat-error *ngIf="username?.errors?.['required']">
+                  Usuário é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width2">
+              <mat-label>Senha</mat-label>
+              <input class="positionPassword" type="password" matInput placeholder="Oficina@g3" formControlName="password">
+                <mat-error *ngIf="password?.errors?.['required']">
+                      Senha é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width2">
+                <mat-label>Nova Senha</mat-label>
+                <input class="positionPassword" type="password" matInput placeholder="Oficina@g3" formControlName="newPassword">
+                  <mat-error *ngIf="newPassword?.errors?.['required']">
+                        Nova Senha é <strong>obrigatório</strong>
+                  </mat-error>
+                  <mat-error *ngIf="errorResetSenha">
+                    As senhas não conferem
+                  </mat-error>
+              </mat-form-field>
+
+            <button class="buttonPosition" mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!resetSenhaProfile.valid">Enviar</button>
+
+            <button class="buttonPosition" mat-raised-button color="secodary" (click)="returnLogin()">voltar</button>
+        </div>
+    </div>
+</div>

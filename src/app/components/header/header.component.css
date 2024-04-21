@@ -1,0 +1,21 @@
+.headerStyle{
+   margin: 0 0 0!important; 
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.spacerIntoText{
+    padding: 1%;
+}
+
+.imageHeight{
+    width: 50px;
+    height: 50px;
+    background-color: whitesmoke;
+}
+
+.designLogout{
+    background-color: whitesmoke!important;
+}

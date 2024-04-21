@@ -1,0 +1,14 @@
+<div flex layout="row">
+  <app-header *ngIf="isLoggedIn"></app-header>
+  <div flex="column" >
+    <mat-drawer-container class="navbar_container">
+      <mat-drawer *ngIf="isLoggedIn" class="navbar" mode="side" opened>
+        <app-navbar></app-navbar>
+      </mat-drawer>
+      <mat-drawer-content>
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+  <app-footer *ngIf="isLoggedIn" class="footer" flex></app-footer>
+</div>

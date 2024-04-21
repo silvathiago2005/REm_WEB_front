@@ -1,0 +1,21 @@
+.navbar_container{
+    height: calc(100vh - 80px);
+}
+.navbar{
+    background-color: #3f51b5;
+    width: 195px;
+}
+.content{
+    width: calc(100vw - 195px);
+    margin-left: 195px;
+}
+.content_div{
+    background-color: whitesmoke;
+}
+.footer{
+    background-color: gray;
+    height: 30px;
+}
+.navbar_container{
+    height: calc(100vh)!important;
+}

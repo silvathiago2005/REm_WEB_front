@@ -1,0 +1,25 @@
+<div class="loginBackground">
+    <div class="mainDivLogin">
+        <div class="divImage"><img src="" alt="" width="300px" height="300px" border-radius="10px"></div>
+        <div class="divLogin" [formGroup]="loginProfile">
+          <mat-form-field class="example-full-width">
+              <mat-label>Usuário</mat-label>
+              <input class="positionUsername" type="text" matInput placeholder="Patinho feio" formControlName="username">
+                <mat-error *ngIf="username?.errors?.['required']">
+                  Usuário é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width2">
+              <mat-label>Senha</mat-label>
+              <input class="positionPassword" type="password" matInput placeholder="Oficina@g3" formControlName="password">
+                <mat-error *ngIf="password?.errors?.['required']">
+                      Senha é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <button class="buttonPosition" mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!loginProfile.valid">Acessar</button>
+            <button class="buttonPosition" mat-raised-button color="secondary" (click)="changePassword()">Trocar Senha</button>
+        </div>
+    </div>
+</div>
